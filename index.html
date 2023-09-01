@@ -11,23 +11,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0de7ee00e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/windowsPopup.css">
+    <link rel="stylesheet" href="./css/calculator.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
     <div class="windows">
+
+
+        <div class="calc-app windows__icon"><i class="fa-solid fa-calculator"></i>
+            <p class="windows__name">Calculator</p>
+        </div>
+
+
         <div class="windows__footer">
             <div class="windows-button"><i class="fa-brands fa-windows"></i></div>
         </div>
-        <div class="windows__popup">
-            <div class="popup-footer"></div>
+
+
+        <div class="windowsPopup">
         </div>
+
+        <div class="calc calc-active">
+            <div class="calc__header">
+                <div class="calc__buttons">
+                    <div class="calc__button red"></div>
+                    <div class="calc__button yellow"></div>
+                    <div class="calc__button green"></div>
+                </div>
+                <div class="previous-number">
+                    <p></p>
+                    <p class="sign"></p>
+                </div>
+                <p class="current-number">0</p>
+            </div>
+            <div class="calc__panel">
+                <button class="allclear grey">AC</button>
+                <button class="clear grey">C</button>
+                <button class="operator grey">x²</button>
+                <button class="operator orange">/</button>
+                <button class="number light-grey">7</button>
+                <button class="number light-grey">8</button>
+                <button class="number light-grey">9</button>
+                <button class="operator orange">x</button>
+                <button class="number light-grey">4</button>
+                <button class="number light-grey">5</button>
+                <button class="number light-grey">6</button>
+                <button class="operator orange">-</button>
+                <button class="number light-grey">1</button>
+                <button class="number light-grey">2</button>
+                <button class="number light-grey">3</button>
+                <button class="operator orange">+</button>
+                <button class="number light-grey">0</button>
+                <button class="operator light-grey">.</button>
+                <button class="equals orange">=</button>
+            </div>
+        </div>
+
+
+
     </div>
 
 
 
     <script src="/js/script.js"></script>
+    <script src="/js/calculator.js"></script>
 </body>
 
 </html>

@@ -194,8 +194,8 @@ body {
 .windows {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(30, 110px);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 100px);
+  grid-template-rows: repeat(20, 100px);
   height: 100vh;
   background-image: url(/img/background.jpg);
   background-repeat: no-repeat;
@@ -203,13 +203,39 @@ body {
   background-position: center;
   z-index: 1000;
 }
+.windows__icon {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0.1em;
+  font-size: 6rem;
+  color: #d6d6d6;
+  cursor: pointer;
+}
+.windows__icon:hover {
+  background-color: rgba(255, 255, 255, 0.068);
+}
+.windows__name {
+  padding-top: 0.5em;
+  font-size: 1.5rem;
+}
+.windows__name::-moz-selection {
+  color: #fff;
+}
+.windows__name::selection {
+  color: #fff;
+}
 .windows__footer {
   display: grid;
   grid-template-columns: repeat(50, 50px);
   grid-template-rows: 1fr;
-  grid-row: -1;
-  grid-column: 1/-1;
   height: 55px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background-color: rgb(20, 20, 20);
   z-index: 1;
 }
@@ -228,22 +254,4 @@ body {
 .windows__footer .windows-button:hover {
   background: rgba(255, 255, 255, 0.068);
   color: rgb(0, 161, 241);
-}
-.windows__popup {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-row: 6/11;
-  grid-column: 1/8;
-  transform: translateY(1000px);
-  background-color: rgba(32, 32, 32, 0.97);
-  transition: transform 0.3s;
-  z-index: -1;
-}
-.windows__popup .popup-footer {
-  grid-row: 8;
-  grid-column: 1/5;
-}
-.windows .active {
-  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
