@@ -194,7 +194,7 @@ body {
 .windows {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(15, 1fr);
+  grid-template-columns: repeat(30, 110px);
   grid-template-rows: repeat(10, 1fr);
   height: 100vh;
   background-image: url(/img/background.jpg);
@@ -205,52 +205,44 @@ body {
 }
 .windows__footer {
   display: grid;
-  grid-template-columns: repeat(30, 1fr);
+  grid-template-columns: repeat(50, 50px);
   grid-template-rows: 1fr;
   grid-row: -1;
   grid-column: 1/-1;
   height: 55px;
-  padding: 0.3em;
   background-color: rgb(20, 20, 20);
   z-index: 1;
 }
 .windows__footer .windows-button {
-  grid-column: 11/12;
+  grid-column: 1/2;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
   cursor: pointer;
-  transition: box-shadow 0.2s;
+  color: white;
+  transition: background 0.2s, color 0.2s;
 }
 .windows__footer .windows-button i {
-  font-size: 3.4rem;
-  color: rgb(0, 161, 241);
+  font-size: 3rem;
 }
 .windows__footer .windows-button:hover {
   background: rgba(255, 255, 255, 0.068);
-  border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.041);
+  color: rgb(0, 161, 241);
 }
 .windows__popup {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-row: 6/11;
-  grid-column: 6/11;
-  width: 500px;
+  grid-column: 1/8;
   transform: translateY(1000px);
-  margin-bottom: 0.8em;
-  border-radius: 8px;
-  background-color: rgba(32, 32, 32, 0.95);
+  background-color: rgba(32, 32, 32, 0.97);
   transition: transform 0.3s;
   z-index: -1;
 }
 .windows__popup .popup-footer {
   grid-row: 8;
   grid-column: 1/5;
-  background-color: rgb(20, 20, 20);
-  border-radius: 0 0 8px 8px;
 }
 .windows .active {
   transform: translateY(0);
