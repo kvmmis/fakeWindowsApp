@@ -6,7 +6,8 @@ const operatorButtons = document.querySelectorAll('.operator');
 const equalsButton = document.querySelector('.equals');
 const clear = document.querySelector('.clear');
 const clearAll = document.querySelector('.allclear');
-const closeBtn = document.querySelector('.red');
+const closeCalcBtn = document.querySelector('.red');
+const calcBody = document.querySelector('.calc');
 let numbers = [];
 let result = 0;
 
@@ -178,6 +179,11 @@ const keyboard = event => {
 	}
 };
 
+const closeCalculator = () => {
+	calcBody.classList.toggle('calc-active');
+	clearScreen();
+};
+
 numbersButtons.forEach(button => {
 	button.addEventListener('click', displayNumbers);
 });
@@ -187,4 +193,5 @@ operatorButtons.forEach(button => {
 equalsButton.addEventListener('click', showResult);
 clear.addEventListener('click', backspace);
 clearAll.addEventListener('click', clearScreen);
+closeCalcBtn.addEventListener('click', closeCalculator);
 document.addEventListener('keydown', keyboard);
